@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
+Route::get('index', action: [App\Http\Controllers\Controller::class, 'index'])->name('index');
 
+Route::get('enroll', action: [App\Http\Controllers\Controller::class, 'enroll'])->name('enroll');

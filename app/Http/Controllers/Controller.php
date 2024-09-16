@@ -10,4 +10,18 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function index()
+    {
+        return view('index');
+    }
+
+    public function enroll()
+    {
+        return view('enroll');
+    }
+
+
 }
+
+
