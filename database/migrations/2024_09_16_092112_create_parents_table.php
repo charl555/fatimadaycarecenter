@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('parents', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Students_ID'); 
-            $table->foreign('Students_ID')->references('id')->on('students')->onDelete('cascade'); 
+            $table->unsignedBigInteger('Student_ID'); 
+            $table->foreign('Student_ID')->references('id')->on('students')->onDelete('cascade'); 
             $table->string('First_Name');
             $table->string('Last_Name');
             $table->string('Middle_Initial');
-            $table->integer('Contact_Number');
+            $table->string('Contact_Number');
             $table->string('Email');
             $table->timestamps();
         });

@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('requirments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Students_ID'); 
-            $table->foreign('Students_ID')->references('id')->on('students')->onDelete('cascade'); 
-            $table->string('PSA/BirthCirtificate');
-            $table->string('ValidID');
-            $table->string('HealthCard');
-            $table->string('Assessment');
-            $table->string('SignedDocuments');
+            $table->unsignedBigInteger('Student_ID'); 
+            $table->foreign('Student_ID')->references('id')->on('students')->onDelete('cascade'); 
+            $table->string('PSABirthCertificate')->default('no');
+            $table->string('ValidID')->default('no');
+            $table->string('HealthCard')->default('no');
+            $table->string('Assessment')->default('no');
+            $table->string('SignedDocuments')->default('no');
             $table->timestamps();
         });
     }

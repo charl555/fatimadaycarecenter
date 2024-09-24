@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('enrollment', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Students_ID'); 
-            $table->foreign('Students_ID')->references('id')->on('students')->onDelete('cascade'); 
+            $table->unsignedBigInteger('Student_ID'); 
+            $table->foreign('Student_ID')->references('id')->on('students')->onDelete('cascade'); 
             $table->integer('Daycare_Type');
             $table->string('Status');
             $table->timestamps('');

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('studentrecords', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Students_ID'); 
-            $table->foreign('Students_ID')->references('id')->on('students')->onDelete('cascade'); 
+            $table->unsignedBigInteger('Student_ID'); 
+            $table->foreign('Student_ID')->references('id')->on('students')->onDelete('cascade'); 
             $table->date('Enrollment_Date');
             $table->date('Report_Generated');
             $table->timestamps();

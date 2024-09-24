@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('nutritionsandservices', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Students_ID'); 
-            $table->foreign('Students_ID')->references('id')->on('students')->onDelete('cascade'); 
+            $table->unsignedBigInteger('Student_ID'); 
+            $table->foreign('Student_ID')->references('id')->on('students')->onDelete('cascade'); 
             $table->string('BreastFeeding');
             $table->string('SupplementalFeeding');
             $table->string('Disability');
@@ -24,7 +24,6 @@ return new class extends Migration
             $table->string('ListahanIdentified');
             $table->string('PantawidBeneficiary');
             $table->string('ECCDExperience');
-            $table->string('Field');
             $table->timestamps();
         });
     }
